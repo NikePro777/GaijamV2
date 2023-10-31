@@ -13,11 +13,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Navbar />
         <main className="relative overflow-hidden">{children}</main>
-        <div className="background-animation">
-          <div id="ball-one"></div>
-          <div id="ball-two"></div>
-          <div id="ball-three"></div>
-        </div>
         {/* <Footer /> */}
       </body>
     </html>

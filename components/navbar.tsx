@@ -3,18 +3,18 @@ import Link from 'next/link';
 
 // NAVIGATION
 export const NAV_LINKS = [
-  { href: '/', key: 'home', label: 'Home' },
-  { href: '/avto', key: 'avtopark', label: 'avtopark' },
-  { href: '/taxi', key: 'taxopark', label: 'taxi' },
-  { href: '/service', key: 'services ', label: 'service' },
-  { href: '/about', key: 'contact_us', label: 'About Us' },
+  { href: '/', key: 'home', label: 'Главная' },
+  { href: '/avto', key: 'avtopark', label: 'Автоподбор' },
+  { href: '/taxi', key: 'taxopark', label: 'Таксопарк' },
+  { href: '/service', key: 'services ', label: 'Автосервис' },
+  { href: '/about', key: 'contact_us', label: 'г.Екатеринбург, ул. Пехотинцев 4' },
 ];
 
 const Navbar = () => {
   return (
     <nav className="flexBetween max-container padding-container relative z-30 py-5">
       <Link href="/">
-        <Image src="/hilink-logo.svg" alt="logo" width={74} height={29} />
+        <Image className="logo-image" src="/logo.png" alt="logo" width={74} height={29} />
       </Link>
 
       <ul className="hidden h-full gap-12 lg:flex">
@@ -28,22 +28,17 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* <div className="lg:flexCenter hidden">
-          <Button
-            type="button"
-            title="Login"
-            icon="/user.svg"
-            variant="btn_dark_green"
-          />
-        </div>
+      <div className="lg:flexCenter hidden">
+        <p>button</p>
+      </div>
 
-        <Image
-          src="menu.svg"
-          alt="menu"
-          width={32}
-          height={32}
-          className="inline-block cursor-pointer lg:hidden"
-        /> */}
+      <Image
+        src="menu.svg"
+        alt="menu"
+        width={32}
+        height={32}
+        className="inline-block cursor-pointer lg:hidden"
+      />
     </nav>
   );
 };
