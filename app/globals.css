@@ -126,7 +126,7 @@ body {
 
   /* Hero */
   .hero-map {
-    @apply absolute right-0 top-0 h-screen w-screen bg-pattern-2 bg-cover bg-center xl:-top-60;
+    @apply absolute right-0 top-0 w-screen bg-pattern-2 bg-cover bg-center xl:-top-60;
   }
 
   /* Camp */
@@ -192,4 +192,17 @@ body {
   @media all and (max-width: 485px) {
     font-size: 42px;
   }
+}
+.hero-map {
+  height: 50%;
+}
+.section {
+  width: 100vw;
+  background-image: url('/avto-logo.jpg'); /* Путь к вашему фоновому изображению */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Минимальная высота секции на всю видимую область */
+  display: flex;
+  align-items: center; /* Центрировать содержимое вертикально */
 }
