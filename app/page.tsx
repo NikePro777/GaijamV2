@@ -3,8 +3,8 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <>
-      <section className="max-container min-h-screen padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row ">
-        <div className="hero-map" />
+      <section className="max-container  padding-container flex flex-col gap-20  md:gap-28  xl:flex-row ">
+        <div className="hero-map min-h-min" />
 
         <div className="relative z-20 flex flex-1 flex-col">
           {/* <Image
@@ -49,6 +49,7 @@ export default function Home() {
           />*/}
           </div>
         </div>
+        <div />
       </section>
 
       <section className="max-container h-screen padding-container">
