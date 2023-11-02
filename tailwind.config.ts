@@ -42,7 +42,8 @@ const config: Config = {
         'pattern-2': "url('/avto-logo.jpg')",
       },
       screens: {
-        xs: '400px',
+        xxs: '400px',
+        xs: '500px',
         '3xl': '1680px',
         '4xl': '2200px',
       },

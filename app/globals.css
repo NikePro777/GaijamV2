@@ -112,6 +112,10 @@ body {
     @apply text-[32px] font-[700] leading-[120%];
   }
 
+  .bold-26 {
+    @apply text-[26px] font-[700] leading-[150%];
+  }
+
   .bold-20 {
     @apply text-[20px] font-[700];
   }
@@ -179,9 +183,13 @@ body {
     margin-bottom: 40px;
   }
 
-  @media all and (max-width: 1080px) {
+  @media all and (min-width: 1440px) {
+    margin-bottom: 40px;
+  }
+
+  @media all and (max-width: 1024px) {
     font-size: 62px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 
   @media all and (max-width: 800px) {
