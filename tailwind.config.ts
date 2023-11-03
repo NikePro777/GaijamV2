@@ -21,7 +21,7 @@ const config: Config = {
           90: '#141414',
         },
         black: {
-          100: '#085E17',
+          100: '#cc5c5c',
           90: '#9A4165',
         },
         orange: {
@@ -38,7 +38,7 @@ const config: Config = {
         'bg-img-1': "url('/img-1.png')",
         'bg-img-2': "url('/img-2.png')",
         'feature-bg': "url('/feature-bg.png')",
-        pattern: "url('/pattern.png')",
+        pattern: "url('/avto-logo1.png')",
         'pattern-2': "url('/avto-logo.jpg')",
       },
       screens: {
