@@ -36,28 +36,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-container h-screen padding-container relative">
-        <div className="main-avtopark max-w-[1440px] min-h-[450px] max-h-[450px] md:min-h-[715px]" />
-        <div className="relative flex flex-1 flex-col">
-          <h1 className="cooltext2 pt-10">Автосервис</h1>
-          <p className="bold-52 mt-3 ml-3 text-black-100 ">
-            Один из лучших сервисов Екатеринбурга в соотношении цена/качество
+      <section className="py-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-4">Специализированный Автосервис</h2>
+          <p className="text-lg mb-4">
+            <a href="tel:+79581365095" className="text-blue-500 hover:underline">
+              +7 (958) 136-5095
+            </a>
           </p>
-
-          <div className="my-11 flex flex-wrap gap-5">
-            <div className="flex items-center gap-2">
-              {Array(5)
-                .fill(1)
-                .map((_, index) => (
-                  <Image src="/star.svg" key={index} alt="star" width={24} height={24} />
-                ))}
-            </div>
-
-            <p className="bold-20  text-black-90">
-              более 1к
-              <span className="regular-20  ml-1">Довольных клиентов</span>
-            </p>
-          </div>
+          <ul className="text-left">
+            <li className="text-base mb-2">Работаем для Вас</li>
+            <li className="text-base mb-2">Ежедневно с 09 до 21</li>
+            <li className="text-base">По адресу</li>
+            <li className="text-base">ул. Пехотинцев д.4</li>
+          </ul>
         </div>
       </section>
     </>
