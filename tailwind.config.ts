@@ -40,6 +40,7 @@ const config: Config = {
         'feature-bg': "url('/feature-bg.png')",
         pattern: "url('/avto-logo1.png')",
         'pattern-2': "url('/avto-logo.jpg')",
+        'pattern-3': "url('/mers.png')",
       },
       screens: {
         xxs: '400px',

@@ -1,3 +1,4 @@
+import Button from '@/components/Button';
 import Image from 'next/image';
 
 export default function Home() {
@@ -36,20 +37,56 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8">
+      <section className="py-8 max-container">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-4">Специализированный Автосервис</h2>
-          <p className="text-lg mb-4">
-            <a href="tel:+79581365095" className="text-blue-500 hover:underline">
+          <h2 className="cooltext2 my-8">Специализированный Автосервис</h2>
+          <p className="text-3xl my-4">
+            Запись по телефону
+            <a href="tel:+79581365095" className="text-blue-500 hover:underline ml-4">
               +7 (958) 136-5095
             </a>
           </p>
-          <ul className="text-left">
-            <li className="text-base mb-2">Работаем для Вас</li>
-            <li className="text-base mb-2">Ежедневно с 09 до 21</li>
-            <li className="text-base">По адресу</li>
-            <li className="text-base">ул. Пехотинцев д.4</li>
+          <ul className="text-left p-10">
+            <li className="text-2xl text-gray-20 mb-2">Работаем для Вас</li>
+            <li className="text-2xl text-gray-30 mb-2">Ежедневно с 09:00 до 21:00</li>
+            <li className="text-2xl text-gray-20 mb-2">По адресу</li>
+            <li className="text-2xl text-gray-30 mb-2">ул. Пехотинцев д.4</li>
           </ul>
+          <div className="flex justify-center items-center">
+            <Button
+              type="submit"
+              title="Услуги автосервиса"
+              variant="btn_dark_green_outline"
+              link="/service"></Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-100 w-screen h-[800px] relative overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img src="./mers.png" alt="Ваше изображение" className="object-cover w-full h-full" />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
+          <h2 className="cooltext2 my-8">Современное авто без вложений!</h2>
+          {/* <p className="text-3xl my-4">
+            Запись по телефону
+            <a href="tel:+79581365095" className="text-blue-500 hover:underline ml-4">
+              +7 (958) 136-5095
+            </a>
+          </p>
+          <ul className="text-left p-10">
+            <li className="text-2xl text-gray-20 mb-2">Работаем для Вас</li>
+            <li className="text-2xl text-gray-30 mb-2">Ежедневно с 09:00 до 21:00</li>
+            <li className="text-2xl text-gray-20 mb-2">По адресу</li>
+            <li className="text-2xl text-gray-30 mb-2">ул. Пехотинцев д.4</li>
+          </ul> */}
+          <div className="flex justify-center items-center">
+            <Button
+              type="submit"
+              title="подробнее"
+              variant="btn_dark_green_outline"
+              link="/taxi"></Button>
+          </div>
         </div>
       </section>
     </>

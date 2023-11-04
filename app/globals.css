@@ -204,9 +204,9 @@ body {
   margin-bottom: 98px;
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 72px;
-  color: #06caf8;
-  --hue: 0;
+  font-size: 48px;
+  color: #06f893;
+  --hue: -100;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: hsl(var(--hue), 50%, 95%);
