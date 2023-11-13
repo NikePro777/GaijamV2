@@ -6,20 +6,24 @@ export default function Home() {
     <>
       {/* gap-20 py-10 md:gap-28 */}
       <section className="max-container padding-container flex flex-col xl:flex-row">
-        <div className="hero-map min-h-[450px] max-h-[450px] md:min-h-[714px]" />
+        <div className="hero-map min-h-[500px] max-h-[500px] md:min-h-[714px]" />
 
         <div className="relative z-20 flex flex-1 flex-col ">
           {/* 2xl:pb-9 */}
           <div className="flexCenter w-full flex-col ">
             {/* lg:bold-88 */}
-            <h1 className="cooltext  py-8 xs:py-12 ">GaiJam</h1>
+            <h1 className="cooltext  py-3 xs:py-12 ">GaiJam</h1>
             {/* bold-52xl:bold-40 */}
             <p className="bold-20 sm:bold-26 text-black-100 md:bold-32 backdrop-blur">
               Мы - единственная в Екатеринбурге многопрофильная компания, способная доставить машину
               комфорт класса по доступной цене.
             </p>
-
-            <div className="my-11 flex flex-wrap gap-2 xxs:pt-6 md:pt-12 lg:pt-8">
+            <Button
+              type="submit"
+              title="Хочу!"
+              variant="btn_dark_green_outline mt-5 xxs:mt-16"
+              link="/service"></Button>
+            <div className="my-7 flex flex-wrap gap-2 xxs:pt-6 xxs2:pt-12 md:pt-12 lg:pt-8">
               <div className="flex items-center gap-2">
                 {Array(5)
                   .fill(1)
@@ -37,12 +41,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 max-container">
+      <section className="pt-12 pb-6 max-container">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="cooltext2 my-8">Специализированный Автосервис</h2>
-          <p className="text-3xl my-4">
-            Запись по телефону
-            <a href="tel:+79581365095" className="text-blue-500 hover:underline ml-4">
+          <p className="text-3xl my-4 ">
+            Запись по телефону <br />
+            <a href="tel:+79581365095" className="text-blue-500 hover:underline ml-4 ">
               +7 (958) 136-5095
             </a>
           </p>
@@ -62,18 +66,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-100 w-screen h-[800px] relative overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="bg-gray-100 w-screen h-[400px] xl:h-[700px] relative overflow-hidden">
+        <div className="absolute inset-0 ">
           <img src="./mers.png" alt="Ваше изображение" className="object-cover w-full h-full" />
         </div>
-        <div className="absolute inset-0  items-center justify-center bg-black bg-opacity-50 text-white">
-          <h2 className="cooltext2 my-8 mx-auto text-center">Современное авто без вложений!</h2>
-          <div className="mx-auto text-center">
+        <div className="absolute inset-0  items-center justify-center bg-black bg-opacity-50 text-white my-12 lg:my-32">
+          <h2 className="cooltext2  mx-auto text-center">Современное авто без вложений!</h2>
+          <div className="mx-auto text-center xl:my-32">
             <Button
               type="submit"
               title="подробнее"
               variant="btn_dark_green_outline"
-              link="/taxi"></Button>
+              link="/taxi"
+              block={true}></Button>
           </div>
         </div>
       </section>

@@ -8,13 +8,16 @@ type ButtonProps = {
   variant: string;
   full?: boolean;
   link?: string;
+  block?: boolean;
 };
 
-const Button = ({ type, title, icon, variant, full, link }: ButtonProps) => {
+const Button = ({ type, title, icon, variant, full, link, block }: ButtonProps) => {
   return link ? (
     <Link href={link}>
       <button
-        className={`flexCenter gap-3 rounded-full border ${variant} ${full && 'w-full'}`}
+        className={`${block ? '' : 'flexCenter'} gap-3 rounded-full border ${variant} ${
+          full && 'w-full'
+        }`}
         type={type}>
         {icon && <Image src={icon} alt={title} width={24} height={24} />}
         <label className="bold-16 whitespace-nowrap cursor-pointer">{title}</label>
@@ -22,7 +25,9 @@ const Button = ({ type, title, icon, variant, full, link }: ButtonProps) => {
     </Link>
   ) : (
     <button
-      className={`flexCenter gap-3 rounded-full border ${variant} ${full && 'w-full'}`}
+      className={`${block ? '' : 'flexCenter'} gap-3 rounded-full border ${variant} ${
+        full && 'w-full'
+      }`}
       type={type}>
       {icon && <Image src={icon} alt={title} width={24} height={24} />}
       <label className="bold-16 whitespace-nowrap cursor-pointer">{title}</label>

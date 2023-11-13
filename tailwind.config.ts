@@ -43,7 +43,8 @@ const config: Config = {
         'pattern-3': "url('/mers.png')",
       },
       screens: {
-        xxs: '400px',
+        xxs: '390px',
+        xxs2: '424px',
         xs: '500px',
         '3xl': '1680px',
         '4xl': '2200px',
