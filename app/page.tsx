@@ -12,7 +12,7 @@ export default function Home() {
           {/* 2xl:pb-9 */}
           <div className="flexCenter w-full flex-col ">
             {/* lg:bold-88 */}
-            <h1 className="cooltext  py-3 xs:py-12 ">GaiJam</h1>
+            <h1 className="cooltext  py-3 xs:py-10 ">GaiJam</h1>
             {/* bold-52xl:bold-40 */}
             <p className="bold-20 sm:bold-26 text-black-100 md:bold-32 backdrop-blur">
               Мы - единственная в Екатеринбурге многопрофильная компания, способная доставить машину
@@ -23,7 +23,7 @@ export default function Home() {
               title="Хочу!"
               variant="btn_dark_green_outline mt-5 xxs:mt-16"
               link="/service"></Button>
-            <div className="my-7 flex flex-wrap gap-2 xxs:pt-6 xxs2:pt-12 md:pt-12 lg:pt-8">
+            <div className="my-7 flex flex-wrap gap-2 xs:pt-8 xxs:pt-6 xxs2:pt-12 md:pt-12 lg:pt-8">
               <div className="flex items-center gap-2">
                 {Array(5)
                   .fill(1)
