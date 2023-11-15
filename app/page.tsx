@@ -14,16 +14,16 @@ export default function Home() {
             {/* lg:bold-88 */}
             <h1 className="cooltext  py-3 xs:py-10 ">GaiJam</h1>
             {/* bold-52xl:bold-40 */}
-            <p className="bold-20 sm:bold-26 text-black-100 md:bold-32 backdrop-blur">
+            <p className="bold-20 sm:bold-26 text-black-100 md:bold-28 backdrop-blur">
               Мы - единственная в Екатеринбурге многопрофильная компания, способная доставить машину
               комфорт класса по доступной цене.
             </p>
             <Button
               type="submit"
               title="Хочу!"
-              variant="btn_dark_green_outline mt-5 xxs:mt-16"
+              variant="btn_dark_green_outline mt-5 xxs:mt-16 xs:mt-10 "
               link="/service"></Button>
-            <div className="my-7 flex flex-wrap gap-2 xs:pt-8 xxs:pt-6 xxs2:pt-12 md:pt-12 lg:pt-8">
+            <div className="my-7 sm:my-0 flex flex-wrap gap-2 xs:pt-8 xxs:pt-6 xxs2:pt-12 md:pt-0 md2:pt-4 lg:pt-3 xs2:my-7">
               <div className="flex items-center gap-2">
                 {Array(5)
                   .fill(1)
@@ -32,9 +32,11 @@ export default function Home() {
                   ))}
               </div>
 
-              <p className="bold-14 text-black-90 md:bold-20">
+              <p className="bold-14 text-black-90 md:bold-20 lg:bold-26">
                 более 1к
-                <span className="regular-14  ml-1 md:regular-20">Довольных клиентов</span>
+                <span className="regular-14  ml-1 md:regular-20 lg:regular-24 lg:ml-3">
+                  Довольных клиентов
+                </span>
               </p>
             </div>
           </div>

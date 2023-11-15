@@ -46,6 +46,8 @@ const config: Config = {
         xxs: '390px',
         xxs2: '424px',
         xs: '500px',
+        xs2: '718px',
+        md2: '924px',
         '3xl': '1680px',
         '4xl': '2200px',
       },
