@@ -17,14 +17,20 @@ const Footer = () => {
   const FOOTER_CONTACT_INFO = {
     title: 'Contact Us',
     links: [
-      { label: 'Admin Officer', value: '958-136-50-95' },
+      { label: 'Admin Officer', value: '+7-958-136-50-95' },
       { label: 'Email Officer', value: 'gaijam@gmail.com' },
     ],
   };
 
   const SOCIALS = {
     title: 'Social',
-    links: ['/facebook.svg', '/instagram.svg', '/twitter.svg', '/youtube.svg', '/wordpress.svg'],
+    links: [
+      './facebook.svg',
+      './instagram.svg',
+      './twitter.svg',
+      './youtube.svg',
+      './wordpress.svg',
+    ],
   };
 
   return (
@@ -75,7 +81,7 @@ const Footer = () => {
 
         <div className="border bg-gray-20" />
         <p className="regular-14 w-full text-center text-gray-30">
-          2023 Hilink | All rights reserved
+          2023 GaiJam | Все права защищены
         </p>
       </div>
     </footer>

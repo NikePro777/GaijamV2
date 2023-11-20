@@ -47,7 +47,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="cooltext2 my-8">Специализированный Автосервис</h2>
           <p className="text-3xl my-4 ">
-            Запись по телефону <br />
+            Запись по телефону <br /> <br />
             <a href="tel:+79581365095" className="text-blue-500 hover:underline ml-4 ">
               +7 (958) 136-5095
             </a>
