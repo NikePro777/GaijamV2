@@ -14,25 +14,6 @@ export default function Page() {
     },
   ];
 
-  const FOOTER_CONTACT_INFO = {
-    title: 'Contact Us',
-    links: [
-      { label: 'Admin Officer', value: '+7-958-136-50-95' },
-      { label: 'Email Officer', value: 'gaijam@gmail.com' },
-    ],
-  };
-
-  const SOCIALS = {
-    title: 'Social',
-    links: [
-      './facebook.svg',
-      './instagram.svg',
-      './twitter.svg',
-      './youtube.svg',
-      './wordpress.svg',
-    ],
-  };
-
   type FooterColumnProps = {
     title: string;
     children: React.ReactNode;
@@ -48,51 +29,38 @@ export default function Page() {
   };
 
   return (
-    <section className="flexCenter mb-24 mt-5">
-      <div className="padding-container max-container flex w-full flex-col gap-14">
-        <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
-          <Link href="/" className="mb-10">
-            <Image className="logo-image" src="/logo.png" alt="logo" width={74} height={29} />
-          </Link>
+    <section className="mb-24 mt-5">
+      <h1 className="cooltext py-3 xs:py-6 text-center">Почему нам доверяют?</h1>
 
-          <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
-            {FOOTER_LINKS.map((columns) => (
-              <FooterColumn title={columns.title}>
-                <ul className="regular-14 flex flex-col gap-4 text-gray-30">
-                  {columns.links.map((link) => (
-                    <Link href="/" key={link}>
-                      {link}
-                    </Link>
-                  ))}
-                </ul>
-              </FooterColumn>
-            ))}
+      <div className="flex flex-col md:flex-row items-stretch">
+        <div className="w-full md:w-full relative md:h-80 lg:w-1/3 lg:h-auto">
+          <Image src="/diagnostik.png" alt="Ваше изображение" layout="fill" objectFit="cover" />
+        </div>
+        <div className="w-full md:w-full lg:w-2/3 flex flex-col justify-center bg-gray-100 p-4">
+          <h2 className="text-2xl font-bold mb-2">Заголовок</h2>
+          <p className="text-lg">Ваш текст...</p>
+        </div>
+      </div>
 
-            <div className="flex flex-col gap-5">
-              <FooterColumn title={FOOTER_CONTACT_INFO.title}>
-                {FOOTER_CONTACT_INFO.links.map((link) => (
-                  <Link href="/" key={link.label} className="flex gap-4 md:flex-col lg:flex-row">
-                    <p className="whitespace-nowrap">{link.label}:</p>
-                    <p className="medium-14 whitespace-nowrap text-blue-70">{link.value}</p>
-                  </Link>
-                ))}
-              </FooterColumn>
-            </div>
-
-            <div className="flex flex-col gap-5">
-              <FooterColumn title={SOCIALS.title}>
-                <ul className="regular-14 flex gap-4 text-gray-30">
-                  {SOCIALS.links.map((link) => (
-                    <Link href="/" key={link}>
-                      <Image src={link} alt="logo" width={24} height={24} />
-                    </Link>
-                  ))}
-                </ul>
-              </FooterColumn>
+      {/* <div className="flexCenter">
+        <div className="padding-container max-container flex w-full flex-col gap-14">
+          <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
+            <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
+              {FOOTER_LINKS.map((columns) => (
+                <FooterColumn title={columns.title}>
+                  <ul className="regular-14 flex flex-col gap-4 text-gray-30">
+                    {columns.links.map((link) => (
+                      <Link href="/" key={link}>
+                        {link}
+                      </Link>
+                    ))}
+                  </ul>
+                </FooterColumn>
+              ))}
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 }
