@@ -5,12 +5,29 @@ import React from 'react';
 export default function Page() {
   const FOOTER_LINKS = [
     {
-      title: 'Learn More',
-      links: ['About Gaijam', 'Avto', 'Taxi', 'Privacy Policy', 'Contact Us'],
+      title: 'Плановое ТО',
+      text: 'Плановое техническое обслуживание в соответствии с регламентом производителя. Необходимый комплекс работ и материалов в соответствии с пробегом автомобиля',
+      link: '/to.png',
     },
     {
-      title: 'Our Community',
-      links: ['Climbing xixixi', 'Hiking hilink', 'Hilink kinthill'],
+      title: 'Ремонт автомобиля',
+      text: 'Профессиональный ремонт: Подвески, Тормозной системы, Двигателя, АКПП, ДЕШЕВЛЕ ДИЛЕРА',
+      link: '/repair.png',
+    },
+    {
+      title: 'Диагностика и ремонт',
+      text: 'Проверка на наличие ошибок Диагностика электронных блоков',
+      link: '/diagnostik.png',
+    },
+    {
+      title: 'Проверка на наличие ошибок Диагностика электронных блоков',
+      text: 'В штате техцентра работают автожестянщики, кузовщики-маляры, прошедшие обучение в специализированных центрах',
+      link: '/deteiling.png',
+    },
+    {
+      title: 'Увеличение мощности кодирования',
+      text: 'мастера помогут улучшить работу вашего авто. Используем проверенные и безопасные способы чип-тюнинга',
+      link: '/power.png',
     },
   ];
 
@@ -32,15 +49,17 @@ export default function Page() {
     <section className="mb-24 mt-5">
       <h1 className="cooltext py-3 xs:py-6 text-center">Почему нам доверяют?</h1>
 
-      <div className="flex flex-col md:flex-row items-stretch">
-        <div className="w-full md:w-full relative md:h-80 lg:w-1/3 lg:h-auto">
-          <Image src="/diagnostik.png" alt="Ваше изображение" layout="fill" objectFit="cover" />
+      {FOOTER_LINKS.map((item) => (
+        <div className="flex flex-col md:flex-row items-stretch">
+          <div className="w-full md:w-full relative md:h-80 lg:w-1/3 lg:h-auto">
+            <Image src={item.link} alt="Ваше изображение" layout="fill" objectFit="cover" />
+          </div>
+          <div className="w-full md:w-full lg:w-2/3 flex flex-col justify-center bg-gray-100 p-4">
+            <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
+            <p className="text-lg">{item.text}</p>
+          </div>
         </div>
-        <div className="w-full md:w-full lg:w-2/3 flex flex-col justify-center bg-gray-100 p-4">
-          <h2 className="text-2xl font-bold mb-2">Заголовок</h2>
-          <p className="text-lg">Ваш текст...</p>
-        </div>
-      </div>
+      ))}
 
       {/* <div className="flexCenter">
         <div className="padding-container max-container flex w-full flex-col gap-14">
