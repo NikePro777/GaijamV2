@@ -1,3 +1,4 @@
+import Card from '@/components/Card';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -48,18 +49,11 @@ export default function Page() {
   return (
     <section className="mb-24 mt-5">
       <h1 className="cooltext py-3 xs:py-6 text-center">Почему нам доверяют?</h1>
-
-      {FOOTER_LINKS.map((item) => (
-        <div className="flex flex-col md:flex-row items-stretch">
-          <div className="w-full md:w-full relative md:h-80 lg:w-1/3 lg:h-auto">
-            <Image src={item.link} alt="Ваше изображение" layout="fill" objectFit="cover" />
-          </div>
-          <div className="w-full md:w-full lg:w-2/3 flex flex-col justify-center bg-gray-100 p-4">
-            <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
-            <p className="text-lg">{item.text}</p>
-          </div>
-        </div>
-      ))}
+      <div className="grid grid-cols-1 gap-x-11 md:grid-cols-2 mx-auto mb-60 md:mb-0 lg:grid-cols-3">
+        {FOOTER_LINKS.map((item) => {
+          return <Card link={item.link} title={item.title} />;
+        })}
+      </div>
 
       {/* <div className="flexCenter">
         <div className="padding-container max-container flex w-full flex-col gap-14">
