@@ -48,7 +48,7 @@ export default function Page() {
 
   return (
     <section className="mb-24 mt-5 md:mt-0 md:mb-14 padding-container max-container">
-      <h1 className="cooltext py-3 xs:py-6 text-center">Почему нам доверяют?</h1>
+      <h1 className="cooltext xs:mb-7 py-3 xs:py-6 text-center">Почему нам доверяют?</h1>
       <div className="grid grid-cols-1 gap-x-11 md:grid-cols-2 mx-auto mb-60 md:mb-0 lg:grid-cols-3 xl:grid-cols-4">
         {FOOTER_LINKS.map((item, i) => {
           return <Card link={item.link} title={item.title} text={item.text} key={i} />;
