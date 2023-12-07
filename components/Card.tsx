@@ -16,7 +16,7 @@ const Card = ({ link, title, text }: CardProps) => {
         src={link}
         alt="Ваше изображение"
       />
-      <h4 className="bold-x tracking-wider mb-1">{title}</h4>
+      <h4 className="bold-x tracking-wider my-1">{title}</h4>
       <p className="w-full">{text}</p>
     </div>
   );
