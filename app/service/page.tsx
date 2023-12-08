@@ -55,31 +55,39 @@ export default function Page() {
   ];
 
   return (
-    <section className="mb-24 mt-5 md:mt-0 md:mb-14 padding-container mx-auto max-w-[1800px]">
-      <h1 className="cooltext xs:mb-7 py-5 xs:py-6 text-center">Почему нам доверяют?</h1>
-      <div className="grid grid-cols-1 gap-x-11 md:grid-cols-2 mx-auto mb-60 md:mb-0 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-        {CardTrust.map((item, i) => {
-          return <Card link={item.link} title={item.title} text={item.text} key={i} />;
-        })}
-      </div>
+    <>
+      <section className="mb-24 mt-5 md:mt-0 md:mb-14 padding-container mx-auto max-w-[1800px]">
+        <h1 className="cooltext xs:mb-7 py-5 xs:py-6 text-center">Почему нам доверяют?</h1>
+        <div className="grid grid-cols-1 gap-x-11 md:grid-cols-2 mx-auto mb-60 md:mb-0 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          {CardTrust.map((item, i) => {
+            return <Card link={item.link} title={item.title} text={item.text} key={i} />;
+          })}
+        </div>
+      </section>
 
-      <h1 className="cooltext xs:mb-7 py-3 xs:py-6 text-center">Наши преимущества</h1>
-      <div className="grid grid-cols-1 gap-x-11 md:grid-cols-2 mx-auto mb-60 md:mb-0 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-        {CardExcellence.map((item, i) => {
-          return (
-            <Card
-              link={item.link}
-              title={item.title}
-              text={item.text}
-              key={i}
-              height={120}
-              weight={120}
-            />
-          );
-        })}
-      </div>
+      <section className="mb-24 mt-5 md:mt-0 md:mb-14 padding-container mx-auto max-w-[1800px]">
+        <h1 className="cooltext xs:mb-7 py-3 xs:py-6 text-center">Наши преимущества</h1>
+        <div className="grid grid-cols-1 gap-x-11 md:grid-cols-2 mx-auto mb-60 md:mb-0 lg:grid-cols-3 xl:grid-cols-4">
+          {CardExcellence.map((item, i) => {
+            return (
+              <Card
+                link={item.link}
+                title={item.title}
+                text={item.text}
+                key={i}
+                height={120}
+                weight={120}
+              />
+            );
+          })}
+        </div>
+      </section>
 
-      <ContactForm />
-    </section>
+      <div className="formContact  max-w-screen">
+        <div className="relative max-h-[700px] padding-container max-container">
+          <ContactForm />
+        </div>
+      </div>
+    </>
   );
 }

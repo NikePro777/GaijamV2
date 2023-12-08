@@ -141,6 +141,10 @@ body {
     @apply absolute right-0 top-0 w-screen bg-pattern-2 bg-cover bg-center md:-top-60;
   }
 
+  .formContact {
+    @apply left-0 top-0 w-screen bg-bg-contact bg-cover bg-center;
+  }
+
   .main-avtopark {
     @apply w-screen bg-pattern bg-cover bg-center absolute;
   }

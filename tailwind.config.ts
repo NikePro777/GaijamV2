@@ -38,6 +38,7 @@ const config: Config = {
         'bg-img-1': "url('/img-1.png')",
         'bg-img-2': "url('/img-2.png')",
         'feature-bg': "url('/feature-bg.png')",
+        'bg-contact': "url('/contactFhone.png')",
         pattern: "url('/avto-logo1.png')",
         'pattern-2': "url('/avto-logo.jpg')",
         'pattern-3': "url('/mers.png')",
