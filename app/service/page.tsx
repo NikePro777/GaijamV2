@@ -1,6 +1,5 @@
 import Card from '@/components/Card';
-import Contact from '@/components/Contact/Contact';
-import ContactForm from '@/components/Contact/ContactForm';
+import ContactForm from '@/components/ContactForm/contact-form';
 import React from 'react';
 
 export default function Page() {
@@ -84,9 +83,16 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="py-24">
+        <div className="container">
+          <h1 className="mb-10 text-center font-serif text-3xl font-medium">Contact us</h1>
+          <ContactForm />
+        </div>
+      </section>
+
       <div className="formContact  max-w-screen">
         <div className="relative max-h-[700px] padding-container max-container">
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </div>
     </>
