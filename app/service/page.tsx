@@ -1,4 +1,5 @@
 import Card from '@/components/Card';
+import Contact from '@/components/Contact/Contact';
 import ContactForm from '@/components/Contact/ContactForm';
 import React from 'react';
 
@@ -85,7 +86,7 @@ export default function Page() {
 
       <div className="formContact  max-w-screen">
         <div className="relative max-h-[700px] padding-container max-container">
-          <ContactForm />
+          <Contact />
         </div>
       </div>
     </>

@@ -1,8 +1,8 @@
 import { useMediaQuery } from '../../hooks/index';
 const ArrowSvg = () => {
-  const isMobile = useMediaQuery(800);
-  const currentWidth = isMobile ? 54 : 80;
-  const currentHeight = isMobile ? 40 : 60;
+  //   const isMobile = useMediaQuery(800);
+  const currentWidth = true ? 54 : 80;
+  const currentHeight = true ? 40 : 60;
 
   return (
     <svg
