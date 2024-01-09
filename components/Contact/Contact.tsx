@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <section className={styles.contact} id="contact">
       <div className="container">
-        <MainTitle text="напишите мне" />
+        <MainTitle text="напишите нам" />
       </div>
       <div className="sub-container">
         <div className={styles.contact__inner}>
@@ -16,7 +16,9 @@ const Contact = () => {
             <p className={styles.contact__text}>
               Нужна помощь с ремонтом авто? Или хотели бы приобрести новый?
             </p>
-            <p className={styles.contact__text}>Напишите нам и мы подберем для вас лучшие варианты и перезвоним</p>
+            <p className={styles.contact__text}>
+              Напишите нам и мы подберем для вас лучшие варианты и перезвоним
+            </p>
 
             <h3 className={styles.contact__title}>
               <span className={styles.contact__title__text}>Мы в соцсетях:</span>
