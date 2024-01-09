@@ -14,13 +14,12 @@ const Contact = () => {
         <div className={styles.contact__inner}>
           <div className={styles.contact__left}>
             <p className={styles.contact__text}>
-              Вы работаете над чем-то великим? Я с удовольствием помогу вам в этом! Напишите мне
-              письмо и мы начнем проект прямо сейчас!
+              Нужна помощь с ремонтом авто? Или хотели бы приобрести новый?
             </p>
-            <p className={styles.contact__text}>Просто сделай это</p>
+            <p className={styles.contact__text}>Напишите нам и мы подберем для вас лучшие варианты и перезвоним</p>
 
             <h3 className={styles.contact__title}>
-              <span className={styles.contact__title__text}>Я в соцсетях:</span>
+              <span className={styles.contact__title__text}>Мы в соцсетях:</span>
               {/* <span className={styles.contact__title__arrow}><ArrowSvg /></span> */}
               <span className={styles.contact__title__border} />
             </h3>

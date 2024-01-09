@@ -40,8 +40,8 @@ const ContactForm = () => {
     <form onSubmit={sendEmail} className={styles.contact__form} ref={formRef}>
       <ContactInput text="Ф.И.О.*" placeholder="Укажите ваши Ф.И.О." type="text" name="fullName" />
       <ContactInput
-        text="Должность/компания"
-        placeholder="Укажите вашу должность/компанию"
+        text="Ваш вопрос"
+        placeholder="Опишите чем мы можем вам помочь"
         type="text"
         name="company"
       />
