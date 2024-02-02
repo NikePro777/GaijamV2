@@ -12,7 +12,7 @@ export default function Home() {
           {/* 2xl:pb-9 */}
           <div className="flexCenter w-full flex-col ">
             {/* lg:bold-88 */}
-            <h1 className="cooltext  py-3 xs:py-10 ">GaiJam</h1>
+            <h1 className="cooltext  py-3 xs:py-10 ">Автокомплекс</h1>
             {/* bold-52xl:bold-40 */}
             <p className="bold-20 sm:bold-26 text-black-100 md:bold-28 backdrop-blur">
               Мы - единственная в Екатеринбурге многопрофильная компания, способная доставить машину

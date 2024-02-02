@@ -12,34 +12,36 @@ export const NAV_LINKS = [
 
 const Navbar = () => {
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+    <header className="flexBetween max-container px-10 md:px-0 md1:padding-container relative z-30 py-2 lg:py-5">
       <Link href="/">
         <Image className="logo-image" src="/logo.png" alt="logo" width={74} height={29} />
       </Link>
 
-      <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link
-            href={link.href}
-            key={link.key}
-            className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
-            {link.label}
-          </Link>
-        ))}
-      </ul>
+      <nav>
+        <ul className="hidden h-full md:gap-5 lg:gap-10 xl:gap-12 md:flex">
+          {NAV_LINKS.map((link) => (
+            <Link
+              href={link.href}
+              key={link.key}
+              className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
+              {link.label}
+            </Link>
+          ))}
+        </ul>
+      </nav>
 
-      <div className="lg:flexCenter hidden">
+      {/* <div className="lg:flexCenter hidden">
         <p>button</p>
-      </div>
+      </div> */}
 
       <Image
         src="menu.svg"
         alt="menu"
         width={32}
         height={32}
-        className="inline-block cursor-pointer lg:hidden"
+        className="inline-block cursor-pointer md:hidden"
       />
-    </nav>
+    </header>
   );
 };
 

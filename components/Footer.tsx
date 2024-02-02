@@ -5,20 +5,16 @@ import React from 'react';
 const Footer = () => {
   const FOOTER_LINKS = [
     {
-      title: 'Learn More',
-      links: ['About Gaijam', 'Avto', 'Taxi', 'Privacy Policy', 'Contact Us'],
-    },
-    {
-      title: 'Our Community',
-      links: ['Climbing xixixi', 'Hiking hilink', 'Hilink kinthill'],
+      title: 'Больше о нас',
+      links: ['О Нас', 'Автоподбор', 'Такси', 'Политика приватности'],
     },
   ];
 
   const FOOTER_CONTACT_INFO = {
-    title: 'Contact Us',
+    title: 'Наши контакты',
     links: [
-      { label: 'Admin Officer', value: '+7-958-136-50-95' },
-      { label: 'Email Officer', value: 'gaijam@gmail.com' },
+      { label: 'Звоните', value: '+7-958-136-50-95' },
+      { label: 'Пишите', value: 'gaijam@gmail.com' },
     ],
   };
 
@@ -81,7 +77,7 @@ const Footer = () => {
 
         <div className="border bg-gray-20" />
         <p className="regular-14 w-full text-center text-gray-30">
-          2023 GaiJam | Все права защищены
+          2024 Автокомплекс | Все права защищены
         </p>
       </div>
     </footer>
