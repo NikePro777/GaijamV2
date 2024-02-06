@@ -1,16 +1,17 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 const getWindowWidth = () => {
   const { innerWidth: windowWidth } = typeof window !== 'undefined' ? window : { innerWidth: 0 };
+
   return { windowWidth };
 };
 
 const useWindowWidth = () => {
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
 
-  const handleResize = () => {
-    setWindowWidth(getWindowWidth());
-  };
+  const handleResize = () => setWindowWidth(getWindowWidth());
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
@@ -29,8 +30,6 @@ export const useMediaQuery = (maxWidth: number) => {
   const [isMedia, setIsMedia] = useState(false);
 
   useEffect(() => {
-    handleResize();
-
     if (windowWidth <= maxWidth) {
       setIsMedia(true);
     } else {

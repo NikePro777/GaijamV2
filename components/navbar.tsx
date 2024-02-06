@@ -1,5 +1,11 @@
-import Image from 'next/image';
+'use client';
+
 import Link from 'next/link';
+import { useMediaQuery } from '@/hooks';
+import { useState } from 'react';
+import stylesMenu from '@/styles/mobileMenu.module.scss';
+import styles from '@/styles/header.module.scss';
+import Logo from './Logo';
 
 // NAVIGATION
 export const NAV_LINKS = [
@@ -7,40 +13,63 @@ export const NAV_LINKS = [
   { href: '/avto', key: 'avtopark', label: 'Автоподбор' },
   { href: '/taxi', key: 'taxopark', label: 'Таксопарк' },
   { href: '/service', key: 'services ', label: 'Автосервис' },
-  { href: '/about', key: 'contact_us', label: 'г.Екатеринбург, ул. Пехотинцев 4' },
+  { href: '/about', key: 'contact_us', label: 'о Нас' },
 ];
 
 const Navbar = () => {
+  const isMobile = useMediaQuery(801);
+  console.log(isMobile);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    (document.querySelector('body') as HTMLBodyElement).classList.toggle('overflow-hidden');
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    (document.querySelector('body') as HTMLBodyElement).classList.remove('overflow-hidden');
+    setMenuOpen(false);
+  };
+
+  const currentMenuItemClass = isMobile ? stylesMenu.menu__item : styles.header__nav__list__item;
+
   return (
-    <header className="flexBetween max-container px-10 md:px-0 md1:padding-container relative z-30 py-2 lg:py-5">
-      <Link href="/">
-        <Image className="logo-image" src="/logo.png" alt="logo" width={74} height={29} />
-      </Link>
+    <header className={styles.header}>
+      <div className={`container ${styles.header__container}`}>
+        {/* <header className="flexBetween max-container px-10 md:px-0 md1:padding-container relative z-30 py-2 lg:py-5"> */}
+        <Logo />
+        {isMobile && (
+          <button
+            onClick={handleToggleMenu}
+            className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`}>
+            <span />
+            <span />
+            <span />
+          </button>
+        )}
+        <nav
+          className={`${isMobile ? stylesMenu.menu : styles.header__nav} ${
+            menuOpen ? stylesMenu.open : ''
+          }`}>
+          <ul className={`${isMobile ? styles.list_reset : styles.header__nav__list}`}>
+            {/* <ul className="hidden h-full md:gap-5 lg:gap-10 xl:gap-12 md:flex"> </ul>*/}
 
-      <nav>
-        <ul className="hidden h-full md:gap-5 lg:gap-10 xl:gap-12 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              href={link.href}
-              key={link.key}
-              className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
-              {link.label}
-            </Link>
-          ))}
-        </ul>
-      </nav>
-
-      {/* <div className="lg:flexCenter hidden">
-        <p>button</p>
-      </div> */}
-
-      <Image
-        src="menu.svg"
-        alt="menu"
-        width={32}
-        height={32}
-        className="inline-block cursor-pointer md:hidden"
-      />
+            {NAV_LINKS.map((link) => (
+              <li className={currentMenuItemClass}>
+                <Link
+                  href={link.href}
+                  key={link.key}
+                  className={styles.header__nav__list__item__link}
+                  onClick={closeMenu}>
+                  {/* className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold" */}
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
