@@ -13,12 +13,11 @@ export const NAV_LINKS = [
   { href: '/avto', key: 'avtopark', label: 'Автоподбор' },
   { href: '/taxi', key: 'taxopark', label: 'Таксопарк' },
   { href: '/service', key: 'services ', label: 'Автосервис' },
-  { href: '/about', key: 'contact_us', label: 'о Нас' },
+  { href: '/about', key: 'contact_us', label: 'Автокомплекс' },
 ];
 
 const Navbar = () => {
   const isMobile = useMediaQuery(801);
-  console.log(isMobile);
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -56,10 +55,10 @@ const Navbar = () => {
             {/* <ul className="hidden h-full md:gap-5 lg:gap-10 xl:gap-12 md:flex"> </ul>*/}
 
             {NAV_LINKS.map((link) => (
-              <li className={currentMenuItemClass}>
+              <li className={currentMenuItemClass} key={link.key}>
                 <Link
                   href={link.href}
-                  key={link.key}
+                  // key={link.key}
                   className={styles.header__nav__list__item__link}
                   onClick={closeMenu}>
                   {/* className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold" */}

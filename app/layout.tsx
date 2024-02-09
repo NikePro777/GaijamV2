@@ -16,7 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Navbar />
         {/* <main className="relative overflow-hidden">{children}</main> */}
-        <Footer />
+        {/* <main>{children}</main> */}
+        {/* <Footer /> */}
       </body>
     </html>
   );
