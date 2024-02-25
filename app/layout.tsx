@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import './globalStyles/normalize.css';
+import './globalStyles/globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/Footer';
 
@@ -13,6 +14,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
       <body>
         <Navbar />
         {/* <main className="relative overflow-hidden">{children}</main> */}
