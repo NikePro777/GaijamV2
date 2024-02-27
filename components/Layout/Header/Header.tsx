@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { useMediaQuery } from '@/hooks';
 import { useState } from 'react';
-import stylesMenu from '@/styles/mobileMenu.module.scss';
 import styles from '@/styles/header.module.scss';
-import Logo from './Logo';
+import stylesMenu from '@/styles/mobileMenu.module.scss';
+import Logo from '../../Logo/Logo';
 
 // NAVIGATION
 export const NAV_LINKS = [
@@ -16,7 +16,7 @@ export const NAV_LINKS = [
   { href: '/about', key: 'contact_us', label: 'Автокомплекс' },
 ];
 
-const Navbar = () => {
+const Header = () => {
   const isMobile = useMediaQuery(801);
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,4 +73,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

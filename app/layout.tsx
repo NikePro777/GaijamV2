@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import './globalStyles/normalize.css';
-import './globalStyles/globals.css';
-import Navbar from '@/components/navbar';
-import Footer from '@/components/Footer';
+// import './globalStyles/normalize.css';
+import './globals.css';
+import Layout from '@/components/Layout/Layout';
 
 export const metadata: Metadata = {
   title: 'Автосервис и автоподбор в Екатеринбурге',
@@ -19,10 +18,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
       />
       <body>
-        <Navbar />
-        {/* <main className="relative overflow-hidden">{children}</main> */}
-        {/* <main>{children}</main> */}
-        {/* <Footer /> */}
+        <Layout>
+          <main>{children}</main>
+        </Layout>
       </body>
     </html>
   );

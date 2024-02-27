@@ -3,40 +3,40 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 28px 0 21px;
+  padding: 10px 0;
   z-index: 1;
   background: rgba(21, 36, 72, 0.2);
   backdrop-filter: blur(125px);
 
-  @media all and (max-width: 800px) {
-    padding: 24px 0;
-  }
+  // @media all and (max-width: 800px) {
+  //   padding: 24px 0;
+  // }
 
-  @media all and (max-width: 485px) {
-    padding-top: 20px;
-  }
+  // @media all and (max-width: 485px) {
+  //   padding-top: 20px;
+  // }
 
   &__container {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   &__nav {
-    width: 71%;
+    // width: 71%;
 
-    @media all and (max-width: 1440px) {
-      width: 70%;
-    }
+    // @media all and (max-width: 1440px) {
+    //   width: 70%;
+    // }
 
-    @media all and (max-width: 1080px) {
-      width: 85%;
-    }
+    // @media all and (max-width: 1080px) {
+    //   width: 85%;
+    // }
 
-    @media all and (max-width: 800px) {
-      width: 83%;
-    }
+    // @media all and (max-width: 800px) {
+    //   width: 83%;
+    // }
 
     &__list {
       list-style-type: none;

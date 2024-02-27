@@ -1,9 +1,13 @@
 import Button from '@/components/Button';
+import Head from 'next/head';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>fdsgdg</title>
+      </Head>
       {/* gap-20 py-10 md:gap-28 */}
       <section className="max-container padding-container flex flex-col xl:flex-row">
         <div className="hero-map min-h-[500px] max-h-[500px] md:min-h-[714px]" />
