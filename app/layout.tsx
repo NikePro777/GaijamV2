@@ -17,11 +17,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
       />
-      <body>
-        <Layout>
-          <main>{children}</main>
-        </Layout>
-      </body>
+
+      <Layout>
+        <body>
+          <main>{children}</main>{' '}
+        </body>
+      </Layout>
     </html>
   );
 }

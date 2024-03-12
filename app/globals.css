@@ -10,9 +10,11 @@
   box-sizing: border-box;
 }
 
-/* body {
-  font-family: Inter;
-} */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 @layer utilities {
   .btn_white {
